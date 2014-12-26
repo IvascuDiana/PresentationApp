@@ -1,0 +1,5 @@
+bman_desktop_homepage:
+    path:     /{_locale}
+    defaults: { _controller: BmanDesktopBundle:Default:index, _locale: en, template:  'BmanDesktopBundle:Default:index.html.twig' }
+    requirements:
+      _locale: en|hu|ro

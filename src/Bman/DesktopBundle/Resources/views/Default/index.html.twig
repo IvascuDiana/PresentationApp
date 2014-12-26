@@ -1,0 +1,114 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <!-- header -->
+    <div class="head-bg">
+        <div class="header">
+            <!-- container -->
+            <div class="container">
+                <div class="head-logo">
+                    <a href="#"><img src="{{ asset('/bundles/bmandesktop/images/logo.png') }}" alt="" /></a>
+                </div>
+                <div class="dropdown-languages">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                </div>
+                <!-- banner Slider starts Here -->
+                <script src="{{ asset('bundles/bmandesktop/js/responsiveslides.min.js') }}"></script>
+                <script>
+                    // You can also use "$(window).load(function() {"
+                    $(function () {
+                        // Slideshow 4
+                        $("#slider4").responsiveSlides({
+                            auto: true,
+                            pager: true,
+                            nav: false,
+                            speed: 500,
+                            namespace: "callbacks",
+                            before: function () {
+                                $('.events').append("<li>before event fired.</li>");
+                            },
+                            after: function () {
+                                $('.events').append("<li>after event fired.</li>");
+                            }
+                        });
+
+                    });
+                </script>
+                <!--//End-slider-script -->
+                <div  id="top" class="callbacks_container">
+                    <ul class="rslides" id="slider4">
+                        <li>
+                            <div class="head-info">
+                                <span><img src="{{ asset('/bundles/bmandesktop/images/mobile.png') }}" alt="" /> </span>
+                                <div class="head-text">
+                                    <h1>{% if app.request.pathInfo == '/' %}{{ title|trans({}, "messages", locale) }}{% else %}{{ title|trans }} {% endif %}</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labornisi ut aliquip ex ea commodo consequa</p>
+                                    <div class="button">
+                                        <a href="#">DOWNLOAD</a>
+                                    </div>
+                                </div>
+                                <div class="mobile-device">
+                                    <img src="{{ asset('/bundles/bmandesktop/images/mobile.png') }}" alt="" />
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="head-info">
+                                <span><img src="{{ asset('/bundles/bmandesktop/images/mobile.png') }}" alt="" /> </span>
+                                <div class="head-text">
+                                    <h1>Beautiful Design</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labornisi ut aliquip ex ea commodo consequa</p>
+                                    <div class="button">
+                                        <a href="#">DOWNLOAD</a>
+                                    </div>
+                                </div>
+                                <div class="mobile-device">
+                                    <img src="{{ asset('/bundles/bmandesktop/images/mobile.png') }}" alt="" />
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li><li>
+                            <div class="head-info">
+                                <span><img src="{{ asset('/bundles/bmandesktop/images/mobile.png') }}" alt="" /> </span>
+                                <div class="head-text">
+                                    <h1>Awesome Design</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labornisi ut aliquip ex ea commodo consequa</p>
+                                    <div class="button">
+                                        <a href="#">DOWNLOAD</a>
+                                    </div>
+                                </div>
+                                <div class="mobile-device">
+                                    <img src="{{ asset('/bundles/bmandesktop/images/mobile.png') }}" alt="" />
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clearfix"> </div>
+                    <!-- banner Slider Ends Here -->
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- //container -->
+        </div>
+    </div>
+    <!-- header -->
+
+    {% include 'BmanDesktopBundle:Includes:welcome_note.html.twig' %}
+
+    {% include 'BmanDesktopBundle:Includes:app.html.twig' %}
+
+    {% include 'BmanDesktopBundle:Includes:team.html.twig' %}
+
+    {% include 'BmanDesktopBundle:Includes:plans.html.twig' %}
+
+    {% include 'BmanDesktopBundle:Includes:box.html.twig' %}
+
+    {% include 'BmanDesktopBundle:Includes:contact.html.twig' %}
+
+    {% include 'BmanDesktopBundle:Includes:footer.html.twig' %}
+
+{% endblock %}

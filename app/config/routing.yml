@@ -1,0 +1,3 @@
+bman_desktop:
+    resource: "@BmanDesktopBundle/Resources/config/routing.yml"
+    prefix:   /

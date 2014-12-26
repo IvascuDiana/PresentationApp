@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Partivity{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('/bundles/bmandesktop/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ asset('/bundles/bmandesktop/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all">
+            <!-- web-font -->
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+            <!-- web-font -->
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script src="{{ asset('/bundles/bmandesktop/js/jquery.min.js') }}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- start-smoth-scrolling -->
+        <script type="text/javascript" src="{{ asset('bundles/bmandesktop/js/move-top.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/bmandesktop/js/easing.js') }}"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+        </script>
+        <!-- start-smoth-scrolling -->
+    </head>
+
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
