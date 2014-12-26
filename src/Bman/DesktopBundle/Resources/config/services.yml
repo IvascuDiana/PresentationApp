@@ -1,0 +1,13 @@
+parameters:
+     location_helper.class: Bman\DesktopBundle\Helper\LocationHelper
+     string_helper.class: Bman\DesktopBundle\Helper\StringHelper
+
+services:
+    string_helper:
+        class: %string_helper.class%
+        arguments: []
+    location_helper:
+        class: %location_helper.class%
+        arguments: [ "@string_helper" ]
+
+

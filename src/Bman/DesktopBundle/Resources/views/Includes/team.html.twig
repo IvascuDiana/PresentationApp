@@ -1,0 +1,66 @@
+<!-- team -->
+<div class="team">
+    <!-- container -->
+    <div class="container">
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 4
+                $("#slider3").responsiveSlides({
+                    auto: true,
+                    pager: true,
+                    nav: false,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+
+            });
+        </script>
+        <div  id="top" class="callbacks_container">
+            <ul class="rslides" id="slider3">
+                <li>
+                    <img src="{{ asset('/bundles/bmandesktop/images/ceo.png') }}" alt="" />
+                    <p>John Smith, CEO</p>
+                    <div class="u-coma">
+                        <img src="{{ asset('/bundles/bmandesktop/images/u-coma.png') }}" alt="" />
+                    </div>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+                    <div class="d-coma">
+                        <img src="{{ asset('/bundles/bmandesktop/images//d-coma.png') }}" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ asset('/bundles/bmandesktop/images/2.png') }}" alt="" />
+                    <p>MELISSA DOE,Director</p>
+                    <div class="u-coma">
+                        <img src="{{ asset('/bundles/bmandesktop/images/u-coma.png') }}" alt="" />
+                    </div>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+                    <div class="d-coma">
+                        <img src="{{ asset('/bundles/bmandesktop/images/d-coma.png') }}" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ asset('/bundles/bmandesktop/images/3.png') }}" alt="" />
+                    <p>Angelica, Designer</p>
+                    <div class="u-coma">
+                        <img src="{{ asset('/bundles/bmandesktop/images/u-coma.png') }}" alt="" />
+                    </div>
+                    <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+                    <div class="d-coma">
+                        <img src="{{ asset('/bundles/bmandesktop/images/d-coma.png') }}" alt="" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- //container -->
+</div>
+<!-- //team -->
